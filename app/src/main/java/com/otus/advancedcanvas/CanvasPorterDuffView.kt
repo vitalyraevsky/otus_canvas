@@ -12,14 +12,12 @@ import android.graphics.PorterDuffXfermode
 import android.graphics.Paint.ANTI_ALIAS_FLAG
 import android.graphics.Bitmap
 
-
-
-
-
-class CanvasPorterDuffView : View {
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+class CanvasPorterDuffView
+@JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
+) : View(context, attrs, defStyleAttr) {
 
     var pathSrc = Path()
     var pathDst = Path()

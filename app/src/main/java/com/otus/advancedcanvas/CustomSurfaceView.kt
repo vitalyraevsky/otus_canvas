@@ -8,10 +8,12 @@ import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 
-class CustomSurfaceView : SurfaceView, SurfaceHolder.Callback {
-    constructor(context: Context?) : super(context) { init() }
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) { init() }
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) { init() }
+class CustomSurfaceView
+@JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
+) : SurfaceView(context, attrs, defStyleAttr), SurfaceHolder.Callback {
 
     lateinit var drawThread : DrawThread
 

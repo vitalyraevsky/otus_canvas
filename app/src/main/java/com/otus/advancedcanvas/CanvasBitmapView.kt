@@ -8,10 +8,12 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 
-class CanvasBitmapView : View {
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+class CanvasBitmapView
+@JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
+) : View(context, attrs, defStyleAttr) {
 
     val blackPaint : Paint
     val blackStrokePaint : Paint
