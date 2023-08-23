@@ -90,6 +90,14 @@ class CustomViewGestures
         (parent as ViewGroup).requestDisallowInterceptTouchEvent(true)
         Log.d("child", "on touch event")
 
+
+        /*
+            ACTION_DOWN > true > ACTION_MOVE > true > ACTION_UP
+            ACTION_DOWN > true > ACTION_MOVE > false
+            ACTION_DOWN > false
+ */
+
+
         val ret = generalGestureDetector.onTouchEvent(event)
 
 /*

@@ -77,22 +77,26 @@ class CanvasBasicsView
 /*
         canvas.drawRoundRect(0f, 0f, width.toFloat(), height.toFloat(), 50f, 50f, blackStrokePaint)
         canvas.drawOval(0f, 0f, width.toFloat(), height.toFloat(), blackStrokePaint)
-        canvas.drawArc(0f, 0f, width.toFloat(), height.toFloat(), 90f, 270f, false, blackPaint)
+        canvas.drawArc(0f, 0f, width.toFloat(), height.toFloat(), 90f, 270f, true, blackStrokePaint)
 
+        canvas.drawArc(rec, 180f, 120f, false, blackPaint)
 
-        canvas.drawArc(rec, 180f, 120f, true, dotPaint)
-        */
+*/
+
+/*
+        blackPaint.textSize = 60f
+        blackPaint.textAlign = Paint.Align.RIGHT
+        canvas.drawText("Hello", midWidth, midHeight, blackPaint)
+*/
+
         /*
-        canvas.drawLine(0f, 0f, midWidth, midHeight, blackPaint)
-        canvas.drawPoint(midWidth, midHeight, dotPaint)
-        canvas.drawCircle(midWidth, midHeight, 100f, blackStrokePaint)
 
-        canvas.drawRect(0f, 0f, width.toFloat(), height.toFloat(), blackStrokePaint)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            canvas.drawRoundRect(0f, 0f, width.toFloat(), height.toFloat(), 50f, 50f, blackStrokePaint)
-            canvas.drawOval(0f, 0f, width.toFloat(), height.toFloat(), blackStrokePaint)
-            canvas.drawArc(0f, 0f, width.toFloat(), height.toFloat(), 90f, 270f, true, blackStrokePaint)
-        }*/
+                canvas.drawRect(0f, 0f, width.toFloat(), height.toFloat(), blackStrokePaint)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    canvas.drawRoundRect(0f, 0f, width.toFloat(), height.toFloat(), 50f, 50f, blackStrokePaint)
+                    canvas.drawOval(0f, 0f, width.toFloat(), height.toFloat(), blackStrokePaint)
+                    canvas.drawArc(0f, 0f, width.toFloat(), height.toFloat(), 90f, 270f, true, blackStrokePaint)
+                }*/
 
         /*//blackStrokePaint.color = Color.GREEN
         //rec.offset(100f, 100f)
@@ -100,10 +104,5 @@ class CanvasBasicsView
         canvas.drawRoundRect(rec, 50f, 50f, blackStrokePaint)
         canvas.drawOval(rec, blackStrokePaint)*/
 
-/*
-        blackPaint.textSize = 60f
-        blackPaint.textAlign = Paint.Align.RIGHT
-        canvas.drawText("Hello", midWidth, midHeight, blackPaint)
-*/
     }
 }

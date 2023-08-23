@@ -75,13 +75,6 @@ class CanvasMatrixView
         path.lineTo(midWidth + 100, midHeight + 100)
         path.close()
 
-
-        matrix0.reset()
-        matrix0.postScale(2f, 2f, midWidth, midHeight)
-        matrix0.preRotate(45f, midWidth, midHeight)
-        //path.transform(matrix0)
-
-
         canvas.drawPath(path, blackStrokePaint)
 
         // 1 2 0
@@ -96,8 +89,12 @@ class CanvasMatrixView
         canvas.drawPath(path, blackPaint)*/
 
         /*matrix0.reset()
+        matrix0.reset()
+        matrix0.setRotate(45f)
+        matrix0.postScale(2f, 2f, midWidth, midHeight)
         matrix0.preTranslate(110f, 110f)
-       // path.transform(matrix0)
+        matrix0.preRotate(45f, midWidth, midHeight)
+        path.transform(matrix0)
 
         //blackStrokePaint.color = Color.RED
         //canvas.drawPath(path, blackStrokePaint)
